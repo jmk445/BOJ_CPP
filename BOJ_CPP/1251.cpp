@@ -6,6 +6,7 @@ using namespace std;
 int get_max_char_idx(string word) {
 	int max_idx = 0;
 	char max_char = word[0];
+	char test;
 
 	for (int i = 0; i < word.size() / sizeof(char); i++) {
 		if (max_char < word[i]) {
