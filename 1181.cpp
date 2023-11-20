@@ -4,16 +4,16 @@ using namespace std;
 
 void quickSort(string* data, int start, int end) {
     if (start >= end) return;
-    int pivot = start;  // 기준 값
+    int pivot = start;  // ���� ��
     int i = start + 1;
     int j = end;
 
     while (i <= j) {
-        while (data[i] <= data[pivot])  // 키 값보다 큰 값 만날때까지 오른쪽으로 이동
+        while (data[i] <= data[pivot])  // Ű ������ ū �� ���������� ���������� �̵�
             i++;
-        while (data[j] >= data[pivot] && j > start)  // 키 값보다 작은 값 만날 때까지 왼쪽으로 이동
+        while (data[j] >= data[pivot] && j > start)  // Ű ������ ���� �� ���� ������ �������� �̵�
             j--;
-        if (i > j)  //현재 엇갈린 상태면 pivot 값 교체
+        if (i > j)  //���� ������ ���¸� pivot �� ��ü
         {
             string temp = data[j];
             data[j] = data[pivot];
@@ -24,7 +24,7 @@ void quickSort(string* data, int start, int end) {
             data[j] = data[i];
             data[i] = temp;
         }
-        // 재귀 호출
+        // ��� ȣ��
         quickSort(data, start, j - 1);
         quickSort(data, j + 1, end);
     }
@@ -34,25 +34,25 @@ void quickSort(string* data, int start, int end) {
 
 
 int main() {
-	int N;
+    int N;
 
-	cin >> N;
+    cin >> N;
 
-	string* words = new string[N];
+    string* words = new string[N];
 
-	for (int i = 0; i < N; i++) {		
-		cin >> words[i];
-	}
+    for (int i = 0; i < N; i++) {
+        cin >> words[i];
+    }
 
     quickSort(words, 0, N - 1);
 
-   
+
     for (int i = 0; i < N; i++) {
 
         cout << words[i] << endl;
     }
 
-	
+
 }*/
 
 #include <iostream>
