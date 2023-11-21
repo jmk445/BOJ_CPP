@@ -7,7 +7,7 @@ for i in range(n):
     ban.append(list(map(int, input().split())))
     same[i] = [0] * n
 
-print(same)
+
 
 for i in range(5):
     for j in range(n):
